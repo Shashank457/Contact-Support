@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+            }
+
+            body {
+            background: rgb(236, 234, 234) !important;
+            }
+
+            .card {
+            background: #222;
+            border: 3px solid #dd2476;
+            color: rgba(250, 250, 250, 0.8);
+            margin-bottom: 4rem;
+            }
+
+            .btn {
+            border: 5px solid;
+            margin-bottom: 4rem;
+            border-image-slice: 1;
+            background: var(--gradient) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            border-image-source:  var(--gradient) !important; 
+            text-decoration: none;
+            transition: all .4s ease;
+            }
+
+            .btn:hover, .btn:focus {
+                background: var(--gradient) !important;
+            -webkit-background-clip: none !important;
+            -webkit-text-fill-color: #fff !important;
+            border: 5px solid #fff !important; 
+            box-shadow: #222 1px 0 10px;
+            text-decoration: underline;
+            }
+            .card {
+                margin: auto;
+  /* margin: auto; */
+  width: 60%;
+  padding: 15px;
+}
+    </style>
+    <title>Dashboard</title>
+</head>
+<body>
+    
+<div class="container mx-auto mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 38rem;">
+  <img src="https://baysport.com/blog/wp-content/uploads/2019/07/backlit-beach-dawn-dusk-588561-1.jpg" class="card-img-top" alt="..." style="width: 38rem;">
+  <div class="card-body">
+    <h1 class="card-title" style="margin-left:8rem;">You Have Successfully Registered</h1>
+    <h1 class="card-title" style="margin-left:8rem;">{{name}}</h1>
+    <h1 class="card-subtitle mb-2 text-muted" style="margin-left:8rem;">{{email.email}}</h1>
+    <h1 class="slot" style="margin-left:8rem;">{{slot}}</h1>
+       
+     <a href="repay" class="btn " style="margin-left:30rem; padding:10px 10px;" ><i class="fab fa-github"></i> Pay</a>
+  </div>
+  </div>
+    </div>    
+       
+</div>
+  </div>
+</body>
+</html>
