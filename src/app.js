@@ -47,7 +47,7 @@ app.post("/register", async(req, res)=>{
 
       //console.log(registerEmployee);
       const registered =  await registerEmployee.save();
-      res.status(201).render("index");
+      res.status(201).render("index",{name:registerEmployee.name,email:registerEmployee.email,linkedin:registerEmployee.linkedin});
     }else{
       res.send("paswords are not matching")
     }
@@ -64,11 +64,13 @@ app.post("/signin", async(req, res)=>{
       //console.log(`${email} and password ${password}`);
       const useremail = await Register.findOne({email:email});
       //console.log(useremail);
+      const username=useremail.name;
+      const userlinkedin=useremail.linkedin;
       const isMatch = bcrypt.compare(password, useremail.password);
       const token = await useremail.generateAuthToken();
       // console.log(token); 
       if(isMatch){
-        res.status(201).render("index1");
+        res.status(201).render("index1",{name: username,email:useremail.email,linkedin:userlinkedin});
       }
       else{
         res.send("password are not matching");
