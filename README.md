@@ -18,4 +18,4 @@
 
 <h1>Instruction To Run the App</h1>
 <h3> Use "NPM i" to install the required packages.</h3>
-<h3>Use "NPM start" in the Frontend and Backend folder to start the App.</h3>
+<h3>Use "NPM run dev"  to start the App.</h3>
